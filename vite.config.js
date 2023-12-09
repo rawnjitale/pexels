@@ -5,7 +5,7 @@ import reactIconsMd from 'react-icons/md';
 export default {
   build: {
     rollupOptions: {
-      external: [reactIconsMd],
+      external: ['@chakra-ui/react', reactIconsMd],
     },
   },
 };
