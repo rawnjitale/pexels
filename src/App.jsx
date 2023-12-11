@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { MdOutlineImageSearch } from "react-icons/md";
 import { Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import logo from '../public/logo.png';
+import logo from './assets/logo.png';
 import {
   Menu,
   MenuButton,
@@ -10,7 +10,7 @@ import {
   MenuItem
 } from '@chakra-ui/react';
 import Home from './Home';
-
+import React from 'react';
 function App() {
   const [q, setQuery] = useState('');
   const [images, setImages] = useState([]);
@@ -77,7 +77,7 @@ function App() {
   return (
     <>
       <nav className=' static flex items-center justify-between bg-sky-50 px-4 py-2 md:px-8'>
-        <div className='flex md:hidden px-0 '><img src={logo} alt='logo' width={50} height={50}/></div>
+        <div className='flex md:hidden px-0 '><img src={logo} alt='logo' width={100} height={100}/></div>
         <div className="hidden md:block text-2xl font-bold text-gray-800">Pikchur</div>
         <form onSubmit={handleSubmit} className="bg-gray-300 p-2 flex items-center rounded-lg ">
           <input className='bg-gray-300 outline-none p-1 input sm:w-[100vw] md:w-[480px] ' type="text" placeholder="Search Picture " onChange={(e) => { setQuery(e.target.value) }} />
